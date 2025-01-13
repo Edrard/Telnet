@@ -1,6 +1,6 @@
 <?php
 
-namespace miyahan\network;
+namespace edrard\network;
 
 /**
 * Telnet class
