@@ -1,5 +1,5 @@
 {
-    "name": "miyahan/telnet",
+    "name": "edrard/telnet",
     "description": "Telnet client in php",
     "keywords": ["telnet", "router", "cisco", "juniper"],
     "license": "MIT",
@@ -38,7 +38,7 @@
     },
     "autoload": {
         "psr-4": {
-            "miyahan\\network\\": "src"
+            "edrard\\network\\": "src"
         }
     },
     "minimum-stability": "dev"
