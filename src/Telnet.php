@@ -53,7 +53,7 @@ class Telnet
     {
         $this->host = $host;
         $this->port = $port;
-        $this->timeout = $timeout;
+        $this->setTimeout($timeout);
         $this->setStreamTimeout($stream_timeout);
 
         // set some telnet special characters
@@ -339,6 +339,16 @@ class Telnet
     {
         $this->stream_timeout_usec = (int)(fmod($timeout, 1) * 1000000);
         $this->stream_timeout_sec = (int)$timeout;
+    }
+    /**
+    * Sets the timeout.
+    *
+    * @param int $timeout
+    * @return void
+    */
+    public function setTimeout($timeout = 10)
+    {
+        $this->timeout = (int)$timeout;
     }
 
     /**
