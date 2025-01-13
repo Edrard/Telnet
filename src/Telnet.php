@@ -526,9 +526,10 @@ class Telnet
 
     /**
     * Reads socket until prompt is encountered
+    * @param string|int|bool $prompt waiting prompt
     */
-    protected function waitPrompt()
+    public function waitPrompt($prompt = False)
     {
-        return $this->readTo($this->prompt);
+        return $this->readTo($prompt && !is_bool($prompt) ? $prompt : $this->prompt);
     }
 }
